@@ -133,14 +133,14 @@ while True:
         if (wait != [] and cars.size()<10 ):
             print("\nThanks for waiting!\nNow you can enter the Parking Garage..\n")
             p=1
-            while (p==1 and (cars.size()<10 and len(wait)>0)):
-                w=input("\nDo you want next waiting list vehicle to enter the Garage from the waiting area?? (y/n)_\n")
+            while (p==1):
+                w=input("Do you want next waiting list vehicle to enter the Garage from the waiting area?? (y/n)_")
                 if (w.lower()=="y"):
                     n=wait.pop()
                     print("\nWelcome to the Parking Garage!")
                     cars.enqueue(n+"1")
                     print("Vehicle with License plate No."+n+" has been arrived to the Parking Garage..")
-                    dual.append(n)
+                    p=2
                 elif(w.lower()=="n"):
                     p=2
                 else:
